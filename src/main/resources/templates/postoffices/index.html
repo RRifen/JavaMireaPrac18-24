@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Offices</title>
+</head>
+<body>
+
+<div th:each="postoffice : ${postoffices}">
+  <a th:href="@{/postoffices/{id}(id=${postoffice.getId()})}"
+     th:text="${postoffice.getName() + ', ' + postoffice.getCityName()}">Post Office</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/postoffices/new">Create new post office</a>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update departure</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/departures/{id}(id=${departure.getId()})}" th:object="${departure}">
+
+    <label for="type">Enter type: </label>
+    <input type="text" th:field="*{type}" id="type"/>
+    <br/>
+
+    <label for="departureDate">Enter Departure date: </label>
+    <input type="text" th:field="*{departureDate}" id="departureDate"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

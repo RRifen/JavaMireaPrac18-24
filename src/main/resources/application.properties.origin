@@ -1,0 +1,28 @@
+# PostgreSQL properties
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.url=
+spring.datasource.username=
+spring.datasource.password=
+
+# Hibernate properties
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.show_sql=true
+
+# Hidden action types (patch, delete)
+spring.mvc.hiddenmethod.filter.enabled=true
+
+# Mail Sender properties
+spring.mail.host=
+spring.mail.port=
+spring.mail.username=
+spring.mail.password=
+spring.mail.properties.mail.smtp.auth=true
+spring.mail.properties.mail.smtp.starttls.enable=true
+
+# Mail to/from
+mail.address.to=
+mail.address.from=
+
+# Actuator
+management.endpoints.web.exposure.include=health, info
+management.endpoints.jmx.exposure.include=*

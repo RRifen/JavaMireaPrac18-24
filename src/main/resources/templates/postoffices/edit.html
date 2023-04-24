@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Post office</title>
+</head>
+<body>
+
+<form th:method="PATCH" th:action="@{/postoffices/{id}(id=${postoffice.getId()})}" th:object="${postoffice}">
+
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+
+    <label for="cityName">Enter city name: </label>
+    <input type="text" th:field="*{cityName}" id="cityName"/>
+    <br/>
+
+    <input type="submit" value="Update!"/>
+</form>
+
+</body>
+</html>

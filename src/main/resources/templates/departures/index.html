@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Departures</title>
+</head>
+<body>
+
+<div th:each="departure : ${departures}">
+  <a th:href="@{/departures/{id}(id=${departure.getId()})}"
+     th:text="${departure.getType() + ', ' + departure.getDepartureDate()}">user</a>
+</div>
+
+<br/>
+<hr/>
+
+<a href="/departures/new">Create new departure</a>
+
+</body>
+</html>

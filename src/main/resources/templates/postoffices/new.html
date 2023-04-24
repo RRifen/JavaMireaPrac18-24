@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New post office</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/postoffices}" th:object="${postoffice}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <br/>
+    <label for="cityName">Enter city name: </label>
+    <input type="text" th:field="*{cityName}" id="cityName"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>

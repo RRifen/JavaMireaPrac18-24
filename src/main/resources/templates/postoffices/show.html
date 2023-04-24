@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Office</title>
+</head>
+<body>
+<p th:text="${postoffice.getName() + ', ' + postoffice.getCityName()}">VALUE</p>
+<p th:text="${postoffice.getId()}">VALUE</p>
+
+
+<a th:href="@{/postoffices/{id}/edit(id=${postoffice.getId()})}">Edit</a>
+
+<form th:method="DELETE" th:action="@{/postoffices/{id}(id=${postoffice.getId()})}">
+    <input type="submit" value="Delete"/>
+</form>
+</body>
+</html>

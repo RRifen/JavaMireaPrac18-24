@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New departure</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/departures}" th:object="${departure}">
+    <label for="type">Enter type: </label>
+    <input type="text" th:field="*{type}" id="type"/>
+    <br/>
+    <label for="departureDate">Enter departureDate: </label>
+    <input type="text" th:field="*{departureDate}" id="departureDate"/>
+    <br/>
+    <input type="submit" value="Create!"/>
+</form>
+
+</body>
+</html>
