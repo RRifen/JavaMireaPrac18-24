@@ -29,7 +29,7 @@ public class DeparturesService {
         this.peopleRepository = peopleRepository;
     }
 
-    public List<Departure> finaAll() {
+    public List<Departure> findAll() {
         log.info("Find all departures");
         System.out.println(peopleRepository.findByUsername("test_user"));
         return departuresRepository.findAll();
